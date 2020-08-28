@@ -1,0 +1,37 @@
+{
+  "name": "presale-contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/vesta-protocol/presale-contract.git",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts": "^3.1.0",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "dotenv": "^8.2.0",
+    "ethereum-waffle": "^3.0.2",
+    "ethers": "^5.0.7",
+    "truffle-plugin-verify": "^0.3.11",
+    "truffle-privatekey-provider": "^1.3.0",
+    "underscore": "^1.10.2"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "migration": "truffle migration",
+    "ts": "typechain --target=truffle-v5 ./build/contracts/*.json",
+    "all": "truffle test ./test/all.js --network develop",
+    "dev": "truffle develop",
+    "deploy_dev": "truffle deploy --network develop",
+    "deploy_dl": "truffle deploy --network development",
+    "deploy_rop": "truffle deploy --network ropsten"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.6",
+    "@truffle/hdwallet-provider": "^1.0.42",
+    "@typechain/truffle-v5": "^2.0.2",
+    "typechain": "^2.0.0",
+    "web3": "^1.2.11"
+  }
+}
